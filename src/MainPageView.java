@@ -15,13 +15,6 @@ public class MainPageView extends Pane {
         label1 = new Label("GO FISH");
         label1.setStyle("-fx-font: 40 arial;");
         label1.relocate(155,180);
-        
-        label2 = new Label("How many pairs of cards would you like?");
-        label2.setStyle("-fx-font: 15 arial;");
-        label2.relocate(132,230);
-
-        no = new TextField();
-        no.relocate(165,250);
 
         start = new Button("START");
         start.setStyle("-fx-font: 12 arial;");
@@ -33,10 +26,15 @@ public class MainPageView extends Pane {
         help.relocate(100,300);
         help.setPrefSize(100,50);
 
-        getChildren().addAll(label1,label2,start,help,no);
+        getChildren().addAll(label1,start,help);
         setPrefSize(500,500);
 
 }
+public Button getStartButton(){ return start;}
+public Button getHelpButton() {return help;}
+public int getPairs(){ // need to check if text can be an int
+        return Integer.parseInt(no.getText());}
+
 
 
 }
