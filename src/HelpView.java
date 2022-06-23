@@ -7,9 +7,9 @@ import javafx.scene.layout.Pane;
 import javafx.scene.control.TextField;
 
 public class HelpView extends Pane{
-    Label label1;
-    Label label2;
-    Button back;
+    private Label label1;
+    private Label label2;
+    private Button back;
     public HelpView(){
         label1 = new Label("INSTRUCTIONS");
         label1.setStyle("-fx-font: 20 arial;");
