@@ -23,4 +23,5 @@ public class HelpView extends Pane{
         getChildren().addAll(label1,back);
         setPrefSize(500,500);
     }
+    public Button getBackButton() { return back;}
 }
