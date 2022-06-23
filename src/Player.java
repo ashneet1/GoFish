@@ -3,9 +3,9 @@ public class Player {
     private int chances;
     private int points;
 
-    public Player(String initName, int initChances){
+    public Player(String initName){
         name = initName;
-        chances = initChances;
+        chances = 22;
         points = 0;
     }
 
