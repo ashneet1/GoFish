@@ -13,6 +13,6 @@ public class Player {
     public int get_chances(){return chances;}
     public int get_points(){return points;}
 
-    public void decrease_chances(int chances){chances -= 1;}
-    public void add_points(int points){points +=1;}
+    public void decrease_chances(){chances -= 1;}
+    public void add_points(){points +=1;}
 }
