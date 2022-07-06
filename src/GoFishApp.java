@@ -5,10 +5,10 @@ import javafx.stage.Stage;
 import javafx.event.*;
 //to do:
 //need to show label of points and chances
-//up1 index should not equal up2 index
-//cards are not being made correctly
+//cards are not being made correctly in middle row
 //randomize card placement
 //need to show second card selected when the two cards don't match
+//need to add instructions to help view
 public class GoFishApp extends Application {
     GoFish model;
     HelpView helpView;
@@ -89,7 +89,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[2].setText(model.getAllCards().get(2).toString());
                     model.setUp1(2);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 2 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[2].setText(model.getAllCards().get(2).toString());
                     model.setUp2(2);
@@ -103,7 +103,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[3].setText(model.getAllCards().get(3).toString());
                     model.setUp1(3);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 3 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[3].setText(model.getAllCards().get(3).toString());
                     model.setUp2(3);
@@ -117,7 +117,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[4].setText(model.getAllCards().get(4).toString());
                     model.setUp1(4);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 4 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[4].setText(model.getAllCards().get(4).toString());
                     model.setUp2(4);
@@ -131,7 +131,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[5].setText(model.getAllCards().get(5).toString());
                     model.setUp1(5);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 5 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[5].setText(model.getAllCards().get(5).toString());
                     model.setUp2(5);
@@ -145,7 +145,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[6].setText(model.getAllCards().get(6).toString());
                     model.setUp1(6);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 6 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[6].setText(model.getAllCards().get(6).toString());
                     model.setUp2(6);
@@ -159,7 +159,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[7].setText(model.getAllCards().get(7).toString());
                     model.setUp1(7);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 7 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[7].setText(model.getAllCards().get(7).toString());
                     model.setUp2(7);
@@ -172,7 +172,7 @@ public class GoFishApp extends Application {
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[8].setText(model.getAllCards().get(8).toString());
                     model.setUp1(8);
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 8 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[8].setText(model.getAllCards().get(8).toString());
                     model.setUp2(8);
@@ -186,7 +186,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[9].setText(model.getAllCards().get(9).toString());
                     model.setUp1(9);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 9 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[9].setText(model.getAllCards().get(9).toString());
                     model.setUp2(9);
@@ -200,7 +200,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[10].setText(model.getAllCards().get(10).toString());
                     model.setUp1(10);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 10 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[10].setText(model.getAllCards().get(10).toString());
                     model.setUp2(10);
@@ -214,7 +214,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[11].setText(model.getAllCards().get(11).toString());
                     model.setUp1(11);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 11 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[11].setText(model.getAllCards().get(11).toString());
                     model.setUp2(11);
@@ -228,7 +228,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[12].setText(model.getAllCards().get(12).toString());
                     model.setUp1(12);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 12 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[12].setText(model.getAllCards().get(12).toString());
                     model.setUp2(12);
@@ -242,7 +242,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[13].setText(model.getAllCards().get(13).toString());
                     model.setUp1(13);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 13 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[13].setText(model.getAllCards().get(13).toString());
                     model.setUp2(13);
@@ -256,7 +256,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[14].setText(model.getAllCards().get(14).toString());
                     model.setUp1(14);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 14 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[14].setText(model.getAllCards().get(14).toString());
                     model.setUp2(14);
@@ -270,7 +270,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[15].setText(model.getAllCards().get(5).toString());
                     model.setUp1(15);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 15 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[15].setText(model.getAllCards().get(5).toString());
                     model.setUp2(15);
@@ -284,7 +284,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[16].setText(model.getAllCards().get(5).toString());
                     model.setUp1(16);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 16 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[16].setText(model.getAllCards().get(5).toString());
                     model.setUp2(16);
@@ -298,7 +298,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[17].setText(model.getAllCards().get(5).toString());
                     model.setUp1(17);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 17 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[17].setText(model.getAllCards().get(17).toString());
                     model.setUp2(17);
@@ -312,7 +312,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[18].setText(model.getAllCards().get(18).toString());
                     model.setUp1(18);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 18 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[18].setText(model.getAllCards().get(18).toString());
                     model.setUp2(18);
@@ -326,7 +326,7 @@ public class GoFishApp extends Application {
                     goFishView.getTheCards()[19].setText(model.getAllCards().get(19).toString());
                     model.setUp1(19);
 
-                }else if(model.getUp1() != 1 & model.getUp2() == -1){
+                }else if(model.getUp1() != 19 & model.getUp2() == -1){
                     goFishView.setStyle("-fx-base: rgb(250,250,250); -fx-text-fill: rgb(0,0,0);");
                     goFishView.getTheCards()[19].setText(model.getAllCards().get(19).toString());
                     model.setUp2(19);
