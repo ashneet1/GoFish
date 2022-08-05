@@ -4,11 +4,10 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.event.*;
 //to do:
-//need to show label of points and chances
-//cards are not being made correctly in middle row
-//randomize card placement
 //need to show second card selected when the two cards don't match
 //need to add instructions to help view
+//need to show you lose(make view for this as well), when chances = 0
+
 public class GoFishApp extends Application {
     GoFish model;
     HelpView helpView;
