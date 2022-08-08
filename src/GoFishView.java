@@ -53,7 +53,7 @@ public class GoFishView extends Pane {
         for(Cards newCard: model.getAllCards()){
             containsX = true;
             containsY = true;
-            //need to randomize location of cards
+            //randomizes location of cards
             theCards[c] = new Button();
             theCards[c].setPrefSize(60,50);
             int rando = rand.nextInt(0,b);
