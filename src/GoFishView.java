@@ -1,9 +1,6 @@
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -14,7 +11,7 @@ public class GoFishView extends Pane {
     private int y=0;
     private int c = 0;
     private Button[] theCards;
-    private Label points, chances, pointsLb, chancesLb;
+    private Label points, chances, pointsLb, chancesLb, winLabel, loseLabel;
     public ArrayList<Integer> xCoordinates;
     public ArrayList<Integer> yCoordinates;
     public GoFishView(GoFish model){
@@ -46,7 +43,18 @@ public class GoFishView extends Pane {
         chances = new Label(String.valueOf(model.getPlayer().get_chances()));
         chances.relocate(90,350);
         chances.setPrefSize(110,25);
-        getChildren().addAll(pointsLb,points,chancesLb,chances);
+
+        winLabel = new Label("You Win!");
+        winLabel.relocate(120,325);
+        winLabel.setPrefSize(200,200);
+        winLabel.setVisible(false);
+
+        loseLabel = new Label("You Lose :(");
+        loseLabel.relocate(120,325);
+        loseLabel.setPrefSize(200,200);
+        loseLabel.setVisible(false);
+
+        getChildren().addAll(pointsLb,points,chancesLb,chances, winLabel,loseLabel);
 
         setPrefSize(500,500);
         theCards = new Button[model.getAllCards().size()];
@@ -94,9 +102,17 @@ public class GoFishView extends Pane {
         if(model.getPlayer().get_chances() == 0){
             System.out.println(" Points: "+model.getPlayer().get_points());
             System.out.println("Game has ended!");
+            for(Button card: theCards){
+                card.setDisable(true);
+            }
+            loseLabel.setVisible(true);
+        }else if(model.getPlayer().get_points() >= 10){
+            for(Button card: theCards){
+                card.setDisable(true);
+            }
+            winLabel.setVisible(true);
         }
     }
     public Button[] getTheCards(){
         return theCards;}
-
 }
